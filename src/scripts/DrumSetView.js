@@ -244,7 +244,7 @@ const DrumSetView = React.createClass({
 				return (
 					<div id="headingContainer" >
 						<h1>Drum Set</h1>
-						<p><a id='none' href='#arnold'>- Click for Arnold Schwarzenegger -</a><a id='none' href='#trump'>- Click for Donald Trump -</a> </p>
+						<p><a id='none' href='#schwarzenegger'>- Click for Arnold Schwarzenegger -</a><a id='none' href='#trump'>- Click for Donald Trump -</a> </p>
 						<p>- Click the sounds below or type the key - </p>
 							<ul>
 								<a><u>Sound</u></a> 
