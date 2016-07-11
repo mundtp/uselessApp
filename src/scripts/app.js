@@ -1,15 +1,36 @@
-const React = require('react'),
-	ReactDOM = require('react-dom')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Backbone from 'backbone'
+import ArnoldView from './ArnoldView.js'
+import TrumpView from './TrumpView.js'
+import DrumSetView from './DrumSetView.js'
+
 
 const app = function() {
 
-	const Header = React.createClass({
-		render: () => {
-			return <h1>YOLO</h1>
+	var AppRouter = Backbone.Router.extend({
+		routes: {
+			"schwarzenegger": "doArnoldView",
+			"trump": "doTrumpView",
+			"drumset": "doDrumSetView",
+			"*catchall": "doDrumSetView"
+		},
+		doArnoldView: function(){
+			ReactDOM.render(<ArnoldView />,document.querySelector('.container'))
+		},
+		doTrumpView: function(){
+			ReactDOM.render(<TrumpView />,document.querySelector('.container'))
+		},
+		doDrumSetView: function(){
+			ReactDOM.render(<DrumSetView />,document.querySelector('.container'))
+		},
+
+		initialize: function() {
+				Backbone.history.start()
 		}
 	})
 
-	ReactDOM.render(<Header/>,document.querySelector('.container'))
+	new AppRouter()
 }
 
 app()
