@@ -13,13 +13,8 @@ var theyLoveMe = new Audio('theyLoveMe.mp3')
 var wall = new Audio('Wall.mp3')
 
 var playFunction = function(audio){
-	if (audio.paused) {
 		audio.currentTime=0
 		audio.play()
-	} 
-	else {
-	    audio.pause();
-	}
 }
 
 const TrumpView = React.createClass({

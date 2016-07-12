@@ -1,24 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
-
 var chopper = new Audio('Chopper.mp3')
-var back = new Audio('Back.mp3')
 var fired = new Audio('Fired.mp3')
 var killMe = new Audio('Killme.mp3')
+var back = new Audio('Back.mp3')
 
 var playFunction = function(audio){
-	if (audio.paused) {
 		audio.currentTime=0
 		audio.play()
-	} 
-	else {
-	    audio.pause();
-	}
 }
 
 const ArnoldView = React.createClass({
-		_doChopper: function(){
+		_doChopper: function(){			
 			playFunction(chopper)
 			var imgNode = document.querySelector('img#chopper')
 			imgNode.style.display = 'block'
@@ -34,13 +28,13 @@ const ArnoldView = React.createClass({
 			playFunction(killMe)
 			var imgNode = document.querySelector('img#killMe')
 			imgNode.style.display = 'block'
-			setTimeout(()=>{imgNode.style.display = 'none'}, 7000)
+			setTimeout(()=>{imgNode.style.display = 'none'}, 6200)
 		},
 		_doBack: function(){
 			playFunction(back)
 			var imgNode = document.querySelector('img#back')
 			imgNode.style.display = 'block'
-			setTimeout(()=>{imgNode.style.display = 'none'}, 3000)
+			setTimeout(()=>{imgNode.style.display = 'none'}, 1800)
 		},
 		
 		render: function(){
@@ -55,7 +49,7 @@ const ArnoldView = React.createClass({
 					<a id='tabs' onClick={this._doKillMe}>Kill Me</a>
 
 					<img id='chopper' src='http://i.giphy.com/13iKFDgHJiG9kk.gif'/>
-					<img id='killMe' src='http://i.giphy.com/FB5s40Hcrl36U.gif'/>
+					<img id='killMe' src='http://i.giphy.com/H6sxyD89zfCSY.gif'/>
 					<img id='back' src='http://i.giphy.com/JDKxRN0Bvmm2c.gif'/>
 					<img id='fired' src='http://i.giphy.com/5QKHMV8P26rew.gif'/>
 				</div>
