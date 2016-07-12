@@ -48,7 +48,7 @@ const ArnoldView = React.createClass({
 					<a id='tabs' onClick={this._doFired}>You're Fired</a>
 					<a id='tabs' onClick={this._doKillMe}>Kill Me</a>
 
-					<img id='chopper' src='http://i.giphy.com/13iKFDgHJiG9kk.gif'/>
+					<img id='chopper' src='http://i.giphy.com/10w2Zz0loKd4tO.gif'/>
 					<img id='killMe' src='http://i.giphy.com/H6sxyD89zfCSY.gif'/>
 					<img id='back' src='http://i.giphy.com/JDKxRN0Bvmm2c.gif'/>
 					<img id='fired' src='http://i.giphy.com/5QKHMV8P26rew.gif'/>
